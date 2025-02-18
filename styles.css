@@ -1,0 +1,141 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #150357;
+    color: white;
+  }
+  
+  header .logo img {
+    width: 100px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main content area with Grid */
+  main {
+    padding: 20px;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .text-column h1 {
+    font-size: 2em;
+  }
+  
+  .text-column p {
+    font-size: 1.1em;
+  }
+  
+  .image-column img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-column img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #2805ec;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+  
+  footer ul li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer p {
+    font-size: 0.9em;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Small screens (up to 600px) */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .content {
+      grid-template-columns: 1fr;
+    }
+  
+    footer ul {
+      text-align: center;
+    }
+  }
+  
+  /* Medium screens (601px to 1024px) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Large screens (above 1024px) */
+  @media (min-width: 1025px) {
+    .content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
